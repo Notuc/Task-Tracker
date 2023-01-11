@@ -4,19 +4,22 @@
 
 <template>
   <div class="container">
-    <Header title="Task Tracker"/>
+    <Header />
+
   </div>
 </template>
 
 <script>
-  import Header from './components/Header.vue'
+import Header from './components/Header.vue'
+  
 
-  export default {
-  name: 'app',
+export default {
+  name: 'App',
   components: {
     Header,
+    
   }
-  }
+}
 </script>
 
 
