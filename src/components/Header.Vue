@@ -2,6 +2,7 @@
     <header>
         <h1>Task Tracker</h1>
         <Button text="Add Task" color="green"/>
+        
     </header>
   </template>
   
