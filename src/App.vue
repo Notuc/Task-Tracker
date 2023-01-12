@@ -46,7 +46,7 @@ export default {
           text: 'Food Shopping',
           day: 'March 3rd at 11:00am',
           reminder: false
-        }
+        },
       ]
     }
   }

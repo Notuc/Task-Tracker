@@ -8,12 +8,13 @@
     import Task from './Task.vue'
         
     export default {
-        name: 'Tasks',
-        props: {
-            tasks: Array
-        },
-        component: {
-            Task
-        }       
-    }
+    name: 'Tasks',
+    props: {
+        tasks: Array
+    },
+    components: {
+        Task
+    }       
+}
+
 </script>
