@@ -19,8 +19,9 @@ export default {
   components: {
     Header,
     Tasks,
+  },
 
-    data(){
+    data() {
       return{
         tasks:[]
       }
@@ -49,7 +50,7 @@ export default {
       ]
     }
   }
-}
+
 </script>
 
 
