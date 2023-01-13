@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1>{{ title }}</h1>
+        <h1>Task Tracker</h1>
         <Button text='Add Task' color="green"/>
         
     </header>
