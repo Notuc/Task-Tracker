@@ -4,7 +4,7 @@
 
 <template>
   <div class="container">
-    <Header @toggle-add-task="toggleAddTask" :showAddtask="showAddTask"/>
+    <Header @toggle-add-task="toggleAddTask" :showAddTask="showAddTask"/>
     <div v-if="showAddTask">
       <AddTask @add-task="addTask"/>
     </div>

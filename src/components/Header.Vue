@@ -2,9 +2,9 @@
     <header>
         <h1>Task Tracker</h1>
         <Button 
-        @toggle-add-task="$emit('toggle-add-task')"
-        :text="showAddTask ? 'close' : 'Add Task' " 
-        color="green"/>
+        @btn-click="$emit('toggle-add-task')"
+        :text="showAddTask ? 'Close' : 'Add Task' "
+        :color="showAddTask ? 'red' : 'green'"/>
         
     </header>
   </template>
