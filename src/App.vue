@@ -4,7 +4,9 @@
 
 <template>
   <div class="container">
-    <Header />
+    <Header
+    {{ title="Task Tracker" }} 
+    />
     <Tasks :tasks="tasks"/>
   </div>
 </template>
