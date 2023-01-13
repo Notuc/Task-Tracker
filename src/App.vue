@@ -6,13 +6,17 @@
   <div class="container">
     <Header 
     />
-    <Tasks :tasks="tasks"/>
+    <Tasks 
+    @toggle-reminder="toggleReminder"
+    @delete-task="deleteTask"
+    :tasks="tasks"/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Tasks from './components/Tasks.vue'
+import Tasks from './components/AddTask.vue'
   
 
 export default {
@@ -26,7 +30,20 @@ export default {
       return{
         tasks:[]
       }
-    },
+    }, 
+    methods: {
+          deleteTask(id){
+            if(confirm("Are you sure you want to delete")) {
+              this.tasks= this.tasks.filter((task) => task.id !== id)
+            }
+          },
+          toggleReminder(id) {
+    this.tasks = this.tasks.map((task) => task.id === id ?
+    {... task, reminder: !task.reminder} : task)
+  },
+
+
+        },
     // this is a method
     created(){
       this.tasks = [
@@ -51,6 +68,7 @@ export default {
       ]
     }
   }
+
 
 </script>
 
