@@ -4,8 +4,8 @@
 
 <template>
   <div class="container">
-    <Header 
-    />
+    <Header />
+    <AddTask @add-task="addTask"/>
     <Tasks 
     @toggle-reminder="toggleReminder"
     @delete-task="deleteTask"
@@ -16,7 +16,7 @@
 <script>
 import Header from './components/Header.vue'
 import Tasks from './components/Tasks.vue'
-import Tasks from './components/AddTask.vue'
+import AddTask from './components/AddTask.vue'
   
 
 export default {
@@ -24,6 +24,7 @@ export default {
   components: {
     Header,
     Tasks,
+    AddTask,
   },
 
     data() {
@@ -32,6 +33,9 @@ export default {
       }
     }, 
     methods: {
+      addTask(task){
+        this.tasks = [...this.tasks, task]
+      },
           deleteTask(id){
             if(confirm("Are you sure you want to delete")) {
               this.tasks= this.tasks.filter((task) => task.id !== id)
